@@ -1,0 +1,83 @@
+version: '3.1'
+services:
+  # mysql:
+  #   image: mysql:5.7
+  #   container_name: mysql
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: upsellguru
+  #     MYSQL_DATABASE: upsellguru
+  #     MYSQL_USER: upsellguru
+  #     MYSQL_PASSWORD: upsellguru
+  #   volumes:
+  #     - upsellguru:/var/lib/mysql
+  #   ports:
+  #     - '3306:3306'
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 81:8080
+  #   depends_on:
+  #     - mysql
+  # db_seeder:
+  #   image: mysql:5.7
+  #   volumes:
+  #     - ./2-databases/seeds.sql:/seeds.sql
+  #     - ./2-databases/db.cnf:/db.cnf
+  #   environment:
+  #     MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+  #   entrypoint: [ "bash", "-c", "sleep 10 && mysql --defaults-extra-file=db.cnf upsellguru < /seeds.sql && exit"]
+  #   depends_on:
+  #     - mysql
+  # warmup:
+  #   container_name: 1-warm-up
+  #   build:
+  #     context: ./1-warm-up
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./1-warm-up:/usr/src/1-warm-up 
+  # algorithms:
+  #   container_name: 3-algorithms
+  #   build:
+  #     context: ./3-algorithms
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./3-algorithms:/usr/src/3-algorithms
+  api-client:
+    container_name: 5-api-client
+    build:
+      context: ./5-api-client
+      dockerfile: Dockerfile
+    volumes:
+      - ./5-api-client:/usr/src/5-api-client
+  # food-app-be:
+  #   container_name: food-app-be
+  #   build:
+  #     context: ./food-app-be
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - '5000:5000'
+  #   volumes:
+  #      - ./food-app-be:/usr/src/app/food-app-be
+  #      - /usr/src/app/food-app-be/node_modules
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=true
+  #   depends_on:
+  #     - mysql
+  # food-app-fe:
+  #   container_name: food-app-fe
+  #   build:
+  #     context: ./food-app-fe
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - '8080:8080'
+  #   volumes:
+  #      - ./food-app-fe:/usr/src/app/food-app-fe
+  #      - /usr/src/app/food-app-fe/node_modules
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=true
+  #   depends_on:
+  #     - food-app-be
+volumes:
+  upsellguru:
