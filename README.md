@@ -1,5 +1,4 @@
 # upsellguru-challenge
-# upsellguru-challenge
 ## 1 - Warm Up
 Regarding the "Warm Up" exercise there is a folder called "1-warm-up" that contains the "odd-and-even.php" file with the script with a function to separate an array of numbers into odd and even numbers arrays. The script can run directly in the directory or via the terminal in the "1-warm-up" Docker container created through the docker-compose file available.
 
