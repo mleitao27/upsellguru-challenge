@@ -1,0 +1,5 @@
+[mysql]
+host = mysql
+user = upsellguru
+password = upsellguru
+port = 3306
