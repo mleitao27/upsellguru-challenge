@@ -1,4 +1,8 @@
 # upsellguru-challenge
+The code that answers to the different challenge exercises can be found in the directories descibed below. But since for developing these exercises Docker containers were used to set up the correct environments to run each of the proposed solutions they are also available for you to test the code if you should to do so. A Docker container was create for each exercise and they are all orchestrated by a docker-compose file found the root directory (/upsellguru-challenge). Start docker compose you just need to run the following command in the mention directory:
+```
+docker-compose -f docker-compose up -d
+```
 ## 1 - Warm Up
 Regarding the "Warm Up" exercise there is a folder called "1-warm-up" that contains the "odd-and-even.php" file with the script with a function to separate an array of numbers into odd and even numbers arrays. The script can run directly in the directory or via the terminal in the "1-warm-up" Docker container created through the docker-compose file available.
 
@@ -61,3 +65,6 @@ Regarding the "API Client" exercise there is a folder called "5-api-client" that
 When running the script the user is prompt to type in the terminal one of the menu options, selecting this way the feature that is going to be executed. The script then runs a function that makes the API request, depending on the selected option and the inputed currencies the script will either return an array of currencies and their exchange rates or just the rate between the two currencies inputed. The results are then printed on the terminal.
 
 Due to limitations of the API's free tier the features are only working for 'USD' as the base currency, this means that for feature 1 the only currency that will word is 'USD' and for feature 2 means that the first currency inputed must also be 'USD' and the second currency can be any other available on the API.
+
+## 6 - React
+The the "React" exercise it was create a React project that can found inside the "6-react" folder and that is set to run in the port 3000 of localhost in case you should decide to run the docker-compose file. This project wass build with the help of TailwindCSS library and since the objective was to test basic markup + basic interaction of the necessary components there was no routering feature developed, requested screen can be found by selecting the "DASHBOARD" option in the navbar.

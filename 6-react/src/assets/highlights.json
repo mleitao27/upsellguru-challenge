@@ -1,0 +1,72 @@
+[
+  {
+    "header": "Pending Upgrades",
+    "data": [
+      {
+        "name": "View All",
+        "value": 1,
+        "link": true
+      }
+    ]
+  },
+  {
+    "header": "Revenue",
+    "data": [
+      {
+        "name": "This Month",
+        "value": 3105,
+        "link": null
+      },
+      {
+        "name": "Last Month",
+        "value": 2938,
+        "link": null
+      },
+      {
+        "name": "This Year",
+        "value": 7711,
+        "link": null
+      }
+    ]
+  },
+  {
+    "header": "Room Upgrades",
+    "data": [
+      {
+        "name": "This Month",
+        "value": 22,
+        "link": null
+      },
+      {
+        "name": "Last Month",
+        "value": 13,
+        "link": null
+      },
+      {
+        "name": "This Year",
+        "value": 44,
+        "link": null
+      }
+    ]
+  },
+  {
+    "header": "Booked Extras",
+    "data": [
+      {
+        "name": "This Month",
+        "value": 41,
+        "link": null
+      },
+      {
+        "name": "Last Month",
+        "value": 73,
+        "link": null
+      },
+      {
+        "name": "This Year",
+        "value": 150,
+        "link": null
+      }
+    ]
+  }
+]

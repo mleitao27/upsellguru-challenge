@@ -1,0 +1,20 @@
+{
+  "dashboard": {
+    "menu": false
+  },
+  "send": {
+    "menu": false
+  },
+  "transactions": {
+    "menu": false
+  },
+  "interfaces": {
+    "menu": false
+  },
+  "reports": {
+    "menu": true
+  },
+  "setup": {
+    "menu": true
+  }
+}

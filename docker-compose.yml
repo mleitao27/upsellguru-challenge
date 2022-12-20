@@ -44,40 +44,24 @@ services:
   #     dockerfile: Dockerfile
   #   volumes:
   #     - ./3-algorithms:/usr/src/3-algorithms
-  api-client:
-    container_name: 5-api-client
+  # api-client:
+  #   container_name: 5-api-client
+  #   build:
+  #     context: ./5-api-client
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./5-api-client:/usr/src/5-api-client
+  react:
+    container_name: 6-react
     build:
-      context: ./5-api-client
+      context: ./6-react
       dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
     volumes:
-      - ./5-api-client:/usr/src/5-api-client
-  # food-app-be:
-  #   container_name: food-app-be
-  #   build:
-  #     context: ./food-app-be
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - '5000:5000'
-  #   volumes:
-  #      - ./food-app-be:/usr/src/app/food-app-be
-  #      - /usr/src/app/food-app-be/node_modules
-  #   environment:
-  #     - CHOKIDAR_USEPOLLING=true
-  #   depends_on:
-  #     - mysql
-  # food-app-fe:
-  #   container_name: food-app-fe
-  #   build:
-  #     context: ./food-app-fe
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - '8080:8080'
-  #   volumes:
-  #      - ./food-app-fe:/usr/src/app/food-app-fe
-  #      - /usr/src/app/food-app-fe/node_modules
-  #   environment:
-  #     - CHOKIDAR_USEPOLLING=true
-  #   depends_on:
-  #     - food-app-be
+       - ./6-react:/usr/src/app/6-react
+       - /usr/src/app/6-react/node_modules
+    # environment:
+    #   - CHOKIDAR_USEPOLLING=true
 volumes:
   upsellguru:
