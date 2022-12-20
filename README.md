@@ -62,6 +62,7 @@ When running the script the user is prompt to type in the terminal the expressio
 ### 4.1 - Basic OOP
 ![Basic OOP](/4-data-modelling/4_1.svg "Basic OOP")
 ### 4.2 - In-Memory File System
+![In-Memory File System](/4-data-modelling/4_2.svg "In-Memory File System")
 ## 5 - API Client
 Regarding the "API Client" exercise there is a folder called "5-api-client" that contains the "open-exchange-rates.php" file with the script with a function that can perform the two operations asked (get from API all exchange rates for a certain currency + get exchange rate between two currencies). The script can run directly in the directory or via the terminal in the "5-api-client" Docker container created through the docker-compose file available.
 
