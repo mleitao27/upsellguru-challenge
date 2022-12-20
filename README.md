@@ -59,6 +59,9 @@ Regarding the "Algorithms" exercise there is a folder called "3-algorithms" that
 When running the script the user is prompt to type in the terminal the expression. The script then runs a function that goes through the string, if a opening bracket is found it is added to a stack, when a closing bracket appears the first position of the stack is searched for the matching bracket, if no match is found the expression is considered unbalanced. All other characters are ignored and the expression is also considered unbalanced if a closing bracket appear before opening brackets are added to the tack and if in the end of the loop there are opening brackets in the stack. For unbalanced expression the index of the unalancing character is stored and showed in the result output.
 
 ## 4 - Data Modelling
+### 4.1 - Basic OOP
+![Basic OOP](/4-data-modelling/4_1.svg "Basic OOP")
+### 4.2 - In-Memory File System
 ## 5 - API Client
 Regarding the "API Client" exercise there is a folder called "5-api-client" that contains the "open-exchange-rates.php" file with the script with a function that can perform the two operations asked (get from API all exchange rates for a certain currency + get exchange rate between two currencies). The script can run directly in the directory or via the terminal in the "5-api-client" Docker container created through the docker-compose file available.
 
